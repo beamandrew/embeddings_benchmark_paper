@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ws-procs11x85.aux
+The style file: ws-procs11x85.bst
+Database file #1: ws-pro-sample.bib
+Warning--I didn't find a database entry for "2003"
+<ws-procs11x85.bst>
+World Scientific's Bibliography Style File for Proceedings
+You can't pop an empty literal stack for entry mikolov2013distributed
+while executing---line 1340 of file ws-procs11x85.bst
+You've used 19 entries,
+            2822 wiz_defined-function locations,
+            770 strings with 7303 characters,
+and the built_in function-call counts, 3826 in all, are:
+= -- 364
+> -- 157
+< -- 5
++ -- 60
+- -- 41
+* -- 295
+:= -- 562
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 191
+empty$ -- 362
+format.name$ -- 41
+if$ -- 918
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 15
+newline$ -- 60
+num.names$ -- 25
+pop$ -- 54
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 122
+stack$ -- 0
+substring$ -- 168
+swap$ -- 79
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 2
+type$ -- 0
+warning$ -- 0
+while$ -- 37
+width$ -- 21
+write$ -- 157
+(There was 1 error message)
