@@ -20,10 +20,10 @@ Chapel Hill, North Carolina ZIP/Zone, USA\\
 E-mail: an\_author@laboratory.com}
 
 \begin{abstract}
-Word embeddings, also known as distributed representations, have seen rapid adoption in natural langauge processing (NLP). Though they are now standard practice in many areas of NLP and machine learning, they are just now beging to attract interest in biomedical informatics. In this article, we present an overview of the existing word embedding methodology and its applicability to biomedical informatics, as well as proposing a set of benchmark for medical concept embedding evaluation. We provide these benchmarks as an R package to the community to encourage quick and easy comparison for new embeddings in the future.
+Word embeddings, also known as distributed representations, have seen rapid adoption in natural langauge processing (NLP) and machine learning. Though they are now standard practice in many areas of NLP and machine learning, they are just now begining to attract interest in biomedical and clinical informatics. In this article, we present an overview of the existing word embedding methodology and its applicability to biomedical informatics, as well as proposing a set of benchmarks for medical concept embedding evaluation. We provide these benchmarks as an R package to the community to encourage quick, easy, and reproducible comparisons for new embeddings in the future.
 \end{abstract}
 
-\keywords{Machine Learning; Distributed Representations; Wrord Vectors; Concept Embeddings}
+\keywords{Machine Learning; Distributed Representations; Word Vectors; Concept Embeddings; Unsupervised Learning}
 
 \bodymatter
 
@@ -31,23 +31,21 @@ Word embeddings, also known as distributed representations, have seen rapid adop
 Here is where we will motivate the paper and introduce the key ideas
 
 \section{Overview of Word Embeddings}\label{aba:intro}
-The idea of a vectorized or distribution representation of a word has it roots in the neural language model of Bengio \cite{bengio2003neural}, though this model is actually a formalization of the ideas first put forth in [paper from the 50s]. However, it wasn't until the paper\cite{mikolov2013distributed} underpinning the wildly successful \emph{word2vec} software package which demonstrated that collapsing the neural language model of Bengio\cite{bengio2003neural} to a linear model enabled greater accuracy through training on much larger datasets that the idea of word embeddings finally came of age.
+The idea of a vectorized or distribution representation of a word has it roots in the neural language model of Bengio \cite{bengio2003neural}, though this model is actually a formalization of the ideas first put forth in [paper from the 50s]. However, it wasn't until the paper\cite{mikolov2013distributed} underpinning the wildly successful \emph{word2vec} software package which demonstrated that collapsing the neural language model of Bengio\cite{bengio2003neural} to a linear model enabled greater accuracy through training on much larger datasets that the idea of word embeddings finally came of age. Though they are often conflated, current distrubted representations are not an instance of \textbf{deep learning}, but are actually a speific kind of linear model, with explicit connects to many well known forms of matrix factorization. 
 
  \subsection{Word2Vec}
  
  \subsection{GLOVE} 
  
  \subsection{Embeddings as random walks}
+ 
+ \subsection{Medical Concept Embeddings}
 
 \section{Benchmarks}
 Here is where we will put the description of all of the benchmarks, put in \verb|\subsection{}| tags
 
 \section{Results}
-You can obtain these files from the following website:
-\url{http://www.wspc.com.sg/style/proceedings_style.shtml}.
-
-
-
+Here is where we will present the results for all of the different embeddings.
 
 \section{References}
 Leave this here for now, I will compile a bibtex file
