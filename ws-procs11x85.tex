@@ -20,7 +20,7 @@ Chapel Hill, NC, 27514, USA\\
 E-mail: kompa@live.unc.edu}
 
 \begin{abstract}
-Word embeddings, also known as distributed representations, have seen rapid adoption in natural language processing (NLP) and machine learning. Though they are now standard practice in many areas of NLP and machine learning, they are just now begining to attract interest in biomedical and clinical informatics. In this article, we present an overview of the existing word embedding methodology and its applicability to biomedical informatics, as well as proposing a set of benchmarks for medical concept embedding evaluation. We provide these benchmarks as an R package to the community to encourage quick, easy, and reproducible comparisons for new embeddings in the future.
+Word embeddings, also known as distributed representations, have seen rapid adoption in natural language processing (NLP) and machine learning. Though they are now standard practice in many areas of NLP and machine learning, they are just now begining to attract interest in biomedical and clinical informatics. In this article, we present an overview of the existing word embedding methodology and investigate their use for biomedical concepts. In addition, we propose a set of benchmarks so that researchers can evaulate concept embeddings and understand what aspects of the source data they capture. We provide the benchmarks and a set of reference embeddings as an R package to the community to encourage quick, easy, and reproducible comparisons of new embeddings in the future.
 \end{abstract}
 
 \keywords{Machine Learning; Distributed Representations; Word Vectors; Concept Embeddings; Unsupervised Learning}
@@ -33,11 +33,7 @@ Here is where we will motivate the paper and introduce the key ideas
 \section{Overview of Word Embeddings}\label{aba:intro}
 The idea of a vectorized or distribution representation of a word has it roots in the neural language model of Bengio \cite{bengio2003neural}, though this model is actually a formalization of the ideas first put forth in [paper from the 50s]. However, it wasn't until the paper\cite{mikolov2013distributed} underpinning the wildly successful \emph{word2vec} software package which demonstrated that collapsing the neural language model of Bengio\cite{bengio2003neural} to a linear model enabled greater accuracy through training on much larger datasets that the idea of word embeddings finally came of age. Though they are often conflated, current distrubted representations are not an instance of deep learning, but are actually a speific kind of linear model, with explicit connections to many well known forms of matrix factorization.
 
- \subsection{Word2Vec}
-
- \subsection{GLOVE}
-
- \subsection{Embeddings as random walks}
+ \subsection{Word2Vec and GLOVE}
 
  \subsection{Medical Concept Embeddings}
 
@@ -47,84 +43,6 @@ Here is where we will put the description of all of the benchmarks, put in \verb
 \section{Results}
 Here is where we will present the results for all of the different embeddings.
 
-\section{References}
-Leave this here for now, I will compile a bibtex file
-References are to be listed in the order cited in the text in Arabic
-numerals. \btex\ users, please use our bibliography style file
-\verb|ws-procs11x85.bst| for references. Non \btex\ users can list
-down their references in the following pattern.
-
-\begin{verbatim}
-\begin{thebibliography}{9}
-
-\bibitem{jarl88} C. Jarlskog, in {\it CP Violation} (World Scientific,
-   Singapore, 1988).
-
-\bibitem{lamp94} L. Lamport, {\it \LaTeX, A Document Preparation System},
-   2nd edition (Addison-Wesley, Reading, Massachusetts, 1994).
-
-\bibitem{ams04} \AmS-\LaTeX{} Version 2 User's Guide (American Mathematical
-   Society, Providence, 2004).
-
-\bibitem{best03} B.~W. Bestbury, {\em J. Phys. A} {\bf 36}, 1947 (2003).
-
-\end{thebibliography}
-\end{verbatim}
-
-\section{{\btex}ing}
-
-If you use the \btex\ program to maintain your bibliography, you do
-not use the \verb|thebibliography| environment. Instead, you should
-include
-\begin{verbatim}
-\bibliographystyle{ws-procs11x85}
-\bibliography{ws-pro-sample}
-\end{verbatim}
-
-\noindent where \verb|ws-procs11x85| refers to a file \verb|ws-procs11x85.bst|,
-which defines how your references will look.
-The argument to \verb|\bibliography| refers to the file
-\verb|ws-pro-sample.bib|, which should contain your database in
-\btex\ format. Only the entries referred to via \verb|\cite| will be
-listed in the bibliography.
-
-Sample output using \verb|ws-procs11x85| bibliography style file:
-
-\begin{center}
-\tablefont
-\begin{tabular}{@{}ll@{}}\toprule
-\multicolumn{1}{c}{\btex}\\
-\multicolumn{1}{c}{database}  & \multicolumn{1}{c}{Sample citation}\\
-\multicolumn{1}{c}{entry type}\\\colrule
-
-article & ... text.\cite{best03,pier02,jame02}\\
-
-proceedings & ... text.\cite{weis94}\\
-
-inproceedings & ... text.\cite{gupt97}\\
-
-book & ... text.\cite{jarl88,rich60}\\
-
-edition & ... text.\cite{chur90}\\
-
-editor & ... text.\cite{benh93}\\
-
-series & ... text.\cite{bake72}\\
-
-tech report & See Refs.~\refcite{hobb92} and \refcite{bria84} for more details\\
-
-unpublished & ... text.\cite{hear94}\\
-
-phd thesis & ... text.\cite{brow88}\\
-
-masters thesis & ... text.\cite{lodh74}\\
-
-incollection & ... text.\cite{dani73}\\
-
-misc & ... text.\cite{davi93}\\
-\botrule
-\end{tabular}
-\end{center}
 
 \bibliographystyle{ws-procs11x85}
 \bibliography{ws-pro-sample}

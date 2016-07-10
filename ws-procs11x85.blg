@@ -3,50 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ws-procs11x85.aux
 The style file: ws-procs11x85.bst
 Database file #1: ws-pro-sample.bib
-Warning--I didn't find a database entry for "2003"
 <ws-procs11x85.bst>
 World Scientific's Bibliography Style File for Proceedings
 You can't pop an empty literal stack for entry mikolov2013distributed
 while executing---line 1340 of file ws-procs11x85.bst
-You've used 19 entries,
+You've used 2 entries,
             2822 wiz_defined-function locations,
-            770 strings with 7303 characters,
-and the built_in function-call counts, 3826 in all, are:
-= -- 364
-> -- 157
-< -- 5
-+ -- 60
-- -- 41
-* -- 295
-:= -- 562
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 8
+            660 strings with 5299 characters,
+and the built_in function-call counts, 519 in all, are:
+= -- 46
+> -- 31
+< -- 0
++ -- 11
+- -- 9
+* -- 42
+:= -- 83
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 191
-empty$ -- 362
-format.name$ -- 41
-if$ -- 918
+cite$ -- 2
+duplicate$ -- 23
+empty$ -- 39
+format.name$ -- 9
+if$ -- 121
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 15
-newline$ -- 60
-num.names$ -- 25
-pop$ -- 54
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 9
+num.names$ -- 2
+pop$ -- 4
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 122
+skip$ -- 18
 stack$ -- 0
-substring$ -- 168
-swap$ -- 79
-text.length$ -- 5
+substring$ -- 22
+swap$ -- 12
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 2
 type$ -- 0
 warning$ -- 0
-while$ -- 37
-width$ -- 21
-write$ -- 157
+while$ -- 4
+width$ -- 3
+write$ -- 17
 (There was 1 error message)
