@@ -9,4 +9,13 @@ T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado and J.~Dean, Distributed
   representations of words and phrases and their compositionality, in {\em
   Advances in neural information processing systems\/}, 2013.
 
+\bibitem{levy2014neural}
+O.~Levy and Y.~Goldberg, Neural word embedding as implicit matrix
+  factorization, in {\em Advances in neural information processing systems\/},
+  2014.
+
+\bibitem{pennington2014glove}
+J.~Pennington, R.~Socher and C.~D. Manning, Glove: Global vectors for word
+  representation., in {\em EMNLP\/}, 2014.
+
 \end{thebibliography}

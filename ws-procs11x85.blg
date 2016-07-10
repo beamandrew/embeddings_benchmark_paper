@@ -7,36 +7,40 @@ Database file #1: ws-pro-sample.bib
 World Scientific's Bibliography Style File for Proceedings
 You can't pop an empty literal stack for entry mikolov2013distributed
 while executing---line 1340 of file ws-procs11x85.bst
-You've used 2 entries,
+You can't pop an empty literal stack for entry levy2014neural
+while executing---line 1340 of file ws-procs11x85.bst
+You can't pop an empty literal stack for entry pennington2014glove
+while executing---line 1340 of file ws-procs11x85.bst
+You've used 4 entries,
             2822 wiz_defined-function locations,
-            660 strings with 5299 characters,
-and the built_in function-call counts, 519 in all, are:
-= -- 46
-> -- 31
+            671 strings with 5556 characters,
+and the built_in function-call counts, 822 in all, are:
+= -- 68
+> -- 50
 < -- 0
-+ -- 11
-- -- 9
-* -- 42
-:= -- 83
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 1
++ -- 18
+- -- 14
+* -- 67
+:= -- 132
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 23
-empty$ -- 39
-format.name$ -- 9
-if$ -- 121
+cite$ -- 4
+duplicate$ -- 35
+empty$ -- 77
+format.name$ -- 14
+if$ -- 195
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 9
-num.names$ -- 2
-pop$ -- 4
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 15
+num.names$ -- 4
+pop$ -- 10
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 21
 stack$ -- 0
 substring$ -- 22
 swap$ -- 12
@@ -45,7 +49,7 @@ text.prefix$ -- 0
 top$ -- 2
 type$ -- 0
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 17
-(There was 1 error message)
+while$ -- 6
+width$ -- 5
+write$ -- 31
+(There were 3 error messages)
