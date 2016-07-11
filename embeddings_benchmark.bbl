@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{bengio2003neural}
+Y.~Bengio, R.~Ducharme, P.~Vincent and C.~Jauvin, {\em journal of machine
+  learning research} {\bf 3}, 1137  (2003).
+
+\bibitem{mikolov2013distributed}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado and J.~Dean, Distributed
+  representations of words and phrases and their compositionality, in {\em
+  Advances in neural information processing systems\/}, 2013.
+
+\bibitem{levy2014neural}
+O.~Levy and Y.~Goldberg, Neural word embedding as implicit matrix
+  factorization, in {\em Advances in neural information processing systems\/},
+  2014.
+
+\end{thebibliography}
