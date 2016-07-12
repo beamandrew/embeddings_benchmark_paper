@@ -1424,7 +1424,6 @@
 \vbadness=12000
 \hbadness=12000
 \usepackage{amsfonts,amssymb,amsmath}
-\usepackage{amsthm}
 \usepackage[figuresright]{ws-rotating}
 \usepackage{dcolumn,url}
 \usepackage{chapterbib}
