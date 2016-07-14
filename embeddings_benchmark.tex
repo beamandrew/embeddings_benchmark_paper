@@ -29,10 +29,16 @@ Word embeddings, also known as distributed representations, have seen rapid adop
 
 \bodymatter
 
-\section{Introduction}\label{aba:intro}
-Word embeddings have proven extremely useful in many ares of NLP and machine learning. 
 
 \section{Distributed Repsentations for Words and Concepts}\label{aba:intro}
+Word embeddings have ignited a furious amount of research after the the results of Mikolovl\cite{mikolov2013distributed} et. al demonstrated that they are capable of capturing a surprising amount of semantic information. The central idea of a word embedding is to represent a word as a dense, real-valued vector that projects the word into a $d$-dimensional space. Words that are similar in this space encode certain semantic and linguistic regularities from the source text. While classic NLP tasks, such as sentiment analysis and text classification, have been shown to benefit from distributed representations, what caused this approach to gain considerable attention was the observation that analogies could be solved using arithmetic vector operations. The now famous example of $king:queen::man:?$ can be sovled by the following operations on their corresponding word vectors: 
+
+\begin{align}
+king - man + woman \approx queen
+\end{align}
+
+Thus, the analogy task of analogy is reduced to addition and subtraction of the word vectors.
+
 The idea of a vectorized or distribution representation of a word has it roots in the neural language model of Bengio \cite{bengio2003neural}, though this model is actually a formalization of the ideas first put forth in [paper from the 50s]. However, it wasn't until the paper\cite{mikolov2013distributed} underpinning the wildly successful \emph{word2vec} software package which demonstrated that collapsing the neural language model of Bengio\cite{bengio2003neural} to a linear model enabled greater accuracy through training on much larger datasets that the idea of word embeddings finally came of age. Though they are often conflated, current distrubted representations are not an instance of deep learning, but are actually a speific kind of linear model, with explicit connections to many well known forms of matrix factorization\cite{levy2014neural}.
 
  \subsection{Word2Vec and Glove}
