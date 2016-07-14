@@ -37,9 +37,9 @@ The idea of a vectorized or distribution representation of a word has it roots i
 
 
 Word embeddings have ignited a furious amount of research after the the results of Mikolov\cite{mikolov2013distributed} et. al demonstrated that they are capable of capturing a surprising amount of semantic information. The central idea of a word embedding is to represent a word as a dense, real-valued vector that projects the word into $d$-dimensional space. Words that are similar in this space encode certain semantic and linguistic regularities from the source text. While classic NLP tasks, such as sentiment analysis and text classification, have been shown to benefit from distributed representations, what caused this approach to gain considerable attention was the observation that analogies could be solved using arithmetic vector operations. The now famous example of $man:woman::king:?$ can be sovled by the following operations on their corresponding word vectors: 
-\begin{align}
+\begin{align*}
 king - man + woman \approx queen
-\end{align}
+\end{align*}
 Where the vector for $queen$ indicates a high cosine similarity to the vector resulting from $king - man + woman$. Thus, the analogy task is reduced to addition and subtraction on the word vectors.
 
  \subsection{Word2Vec and Glove}
