@@ -43,7 +43,7 @@ king - man + woman \approx queen
 Where the vector for $queen$ indicates a high cosine similarity to the vector resulting from $king - man + woman$. Thus, the analogy task is reduced to addition and subtraction on the word vectors.
 
  \subsection{Word2Vec and Glove}
-The two most popular algorithms for computing word vectors to emerge from the last several years of work are \emph{word2vec}\cite{mikolov2013distributed} and \emph{Glove}\cite{pennington2014glove}. The ideas in \emph{word2vec} were originally presented in terms of two predictive models, the skip-gram and the CBOW. Thought the objective function as originally presented appeared somewhat mysterious, later it was shown that the skip-gram model with negative sampling was equivalent to factorizing a shifted pointwise mutual information matrix\cite{levy2014neural} for word-context pairs.
+The two most popular algorithms for computing word vectors to emerge from the last several years of work are \emph{word2vec}\cite{mikolov2013distributed} and \emph{Glove}\cite{pennington2014glove}. The ideas in \emph{word2vec} were originally presented in terms of two predictive models, the skip-gram and the CBOW. Though the objective function as originally presented appeared somewhat mysterious, later it was shown that the skip-gram model with negative sampling was equivalent to factorizing a shifted pointwise mutual information matrix\cite{levy2014neural} of word-context pairs.
 
  \subsection{Medical Concept Embeddings}
 
