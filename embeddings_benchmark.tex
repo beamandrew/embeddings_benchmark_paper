@@ -2,7 +2,9 @@
 %\documentclass[square]{ws-procs11x85}
 \documentclass{ws-procs11x85}
 \usepackage{graphicx}
-
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{subcaption}
 %\documentclass{article}
 
 \begin{document}
@@ -13,8 +15,7 @@
 
 \address{Department of Biomedical Informatics, Harvard Medical School,\\
 Boston, MA, 02115, USA\\
-$^*$E-mail: Andrew\_Beam@hms.harvard.edu\\
-www.university\_name.edu}
+$^*$E-mail: Andrew\_Beam@hms.harvard.edu\\}
 
 \author{Benjamin Kompa}
 
@@ -47,17 +48,64 @@ The two most popular algorithms for computing word vectors to emerge from the la
 
  \subsection{Medical Concept Embeddings}
 
-\section{Benchmarks}
-Here is where we will put the description of all of the benchmarks, put in \verb|\subsection{}| tags
 
+\subsection{Querying the embedding}
+Temporary placeholder of the various knowledge assumptions in the Benchmark section. Querying the word embedding returns a named vector of cosine similarities named by CUI and sorted in decreasing order. 
+
+\section{Benchmarks}
+
+
+
+\subsection{Discounted Cummulative Gain}
+
+Discounted cummulative gain (DCG) emphasizes retreiving more relevant concepts from the embedding. $DCG_k$ represents the cummulative sum over the first k elements of the answer vector from an embedding query. The indicator function is 1 if the element is in the expected responses and 0 otherwise. Therefore, if there is a nonrelevant CUI in the first k elements, its DCG contribution is not incorporated. 
+\begin{equation}
+DCG_k = \sum_{i=1}^{k} \mathds{1}\frac{2^{{Similarity}_i} -1}{\log_2 (i+1)}
+\end{equation}
+
+\subsection{Mean Average Precision}
+
+Mean average precision (MAP) is the average of the fraction of expected CUIs that are returned when the embedding is queried. $MAP_k$ considers only the first k elements in the sorted list of similar CUIs. In contrast to DCG, MAP and AP do not consider the relevant positions of returned elements, only whether the elements are in the list. 
+\begin{equation}
+{MAP}_k = \frac{\sum_{i=1}^{n}{Average Precision_k}_i}{n}
+\end{equation}
+Where n is the number of queries and $AP_i$ is the fraction of expected CUIs in the returned list for $query_i$.
+
+\subsection{Comorbidity Benchmark}
+
+The comorbidity benchmark computes the DCG for each \textit{concept} of a disease. A concept is a CUI-String pair that is very related to or commonly synomynous with the disease. For example, concepts of obesity include obesity, morbid obesity, and lifelong obesity. By calculating DCG for multiple concepts, we capture more of an embedding's ability to relate the disease to its comorbidities, called \textit{associations} in the data file. 
+
+Thus for each disease, we calculate $n$ DCG scores for the $n$ concepts of a disease. In the DCG calculation, the disease's associations are the expected responses. Our program has the ability to report each DCG or the maximum DCG over all concepts for a disease. 
+
+\subsection{Semantic Type Benchmark}
+The semantic type benchmark computes MAP for a list of CUI-string pairs that are in the same broad category, or semantic type. For example, the semantic type "Genetic Function" contains strings such as gene amplication, DNA repair, and RNA splicing. In theory, an embedding should produce high cosine similarities between the related terms of a semantic type. This benchmark calculates the average precision for each term in semantic type list, which is the fraction of the top $k$ query answer elements that are terms in the semantic list. The benchmark then takes the average of the average precisions to calculate MAP for the semantic type. 
+
+\subsection{Causative Benchmark}
+The causative benchmark computes the fraction of cause-result pairs that have the result in the top $k$ answers when the embedding is queried with the cause. This is a degenerate case of $MAP_k$. The average precisions for each cause-result pair is a binary variable because there is an injective relationship between cause and result. By taking the mean of these average precisions, the causative benchmark is essentially estimating the accuracy of a word embedding predicting results from causes. 
+
+\subsection{NDF-RT Benchmark}
+The NDF-RT benchmark computes MAP of treatment/condition relationships extracted from the National Drug File - Reference Terminology database. For each treament, AP is calculated with respect to the 1 or more extracted conditions.
 
 \section{Results}
 Here is where we will present the results for all of the different embeddings.
 
-\includegraphics[scale=.5]{dcg_plot.pdf}
-\includegraphics[scale=.5]{map_plot.pdf}
 
-\bibliographystyle{ws-procs11x85}
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{dcg_plot.pdf}
+        \caption{DCG}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{map_plot.pdf}
+        \caption{MAP}
+    \end{subfigure}
+}
+    \caption{Comparison of Stanford and Glove}
+\end{figure}
+
+\bibliographystyle{ws-procs11x85}Command \captionbox already defined.
 \bibliography{ws-pro-sample}
 
 \end{document}
